@@ -8,7 +8,9 @@ readme = "README.md"
 repository = "https://github.com/Dunc4nNT/pasf"
 
 [tool.poetry.dependencies]
-python = "^3.13"
+python = "^3.12"
+litestar = "^2.13.0"
+uvicorn = "^0.33.0"
 
 
 [tool.poetry.group.docs.dependencies]
@@ -23,12 +25,8 @@ ruff = "^0.8.0"
 pytest = "^8.3.3"
 
 
-[tool.poetry.scripts]
-pasf-api = "pasf_api.__main__:main"
-
-
 [tool.ruff]
-target-version = "py313"
+target-version = "py312"
 line-length = 99
 preview = true
 
@@ -112,9 +110,9 @@ convention = "numpy"
 
 
 [tool.pyright]
-include = ["api", "tests"]
+include = ["app.py", "src", "tests"]
 
-pythonVersion = "3.13"
+pythonVersion = "3.12"
 pythonPlatform = "All"
 typeCheckingMode = "strict"
 strictListInference = true
