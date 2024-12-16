@@ -11,6 +11,7 @@ repository = "https://github.com/Dunc4nNT/pasf"
 python = "^3.12"
 litestar = "^2.13.0"
 uvicorn = "^0.33.0"
+anyio = "^4.7.0"
 
 
 [tool.poetry.group.docs.dependencies]
@@ -98,6 +99,9 @@ ignore = [
 ]
 unfixable = ["E501", "ERA"]
 
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D", "DOC", "S101"]
+
 [tool.ruff.format]
 line-ending = "lf"
 docstring-code-format = true
@@ -110,7 +114,7 @@ convention = "numpy"
 
 
 [tool.pyright]
-include = ["app.py", "src", "tests"]
+include = ["app", "tests"]
 
 pythonVersion = "3.12"
 pythonPlatform = "All"
