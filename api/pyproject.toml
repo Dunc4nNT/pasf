@@ -1,6 +1,7 @@
 [tool.poetry]
 name = "pasf-api"
 version = "0.1.0"
+package-mode = false
 description = "Flashcards app."
 authors = ["Dunc4nNT <76918336+Dunc4nNT@users.noreply.github.com>"]
 license = "MPL-2.0"
@@ -9,9 +10,9 @@ repository = "https://github.com/Dunc4nNT/pasf"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-litestar = "^2.13.0"
-uvicorn = "^0.33.0"
+uvicorn = { version = "^0.33.0", extras = ["standard"] }
 anyio = "^4.7.0"
+litestar = { version = "^2.13.0", extras = ["pydantic"] }
 
 
 [tool.poetry.group.docs.dependencies]
