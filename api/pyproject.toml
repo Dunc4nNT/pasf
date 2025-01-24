@@ -1,12 +1,13 @@
 [tool.poetry]
 name = "pasf-api"
 version = "0.1.0"
-package-mode = false
 description = "Flashcards app."
 authors = ["Dunc4nNT <76918336+Dunc4nNT@users.noreply.github.com>"]
 license = "MPL-2.0"
 readme = "README.md"
 repository = "https://github.com/Dunc4nNT/pasf"
+packages = [{ include = "app" }]
+
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -22,11 +23,15 @@ sphinx = "^8.1.3"
 
 
 [tool.poetry.group.dev.dependencies]
-ruff = "^0.8.0"
+ruff = "^0.9.0"
 
 
 [tool.poetry.group.tests.dependencies]
 pytest = "^8.3.3"
+
+
+[tool.poetry.scripts]
+pasf = "app.__main__:run_litestar"
 
 
 [tool.ruff]
