@@ -1,3 +1,6 @@
-from app.domain.system import urls
+from app.domain.system import schemas, urls
 
-__all__ = ("urls",)
+__all__ = (
+    "schemas",
+    "urls",
+)

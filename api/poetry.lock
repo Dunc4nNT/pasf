@@ -107,6 +107,21 @@ gssauth = ["gssapi", "sspilib"]
 test = ["distro (>=1.9.0,<1.10.0)", "flake8 (>=6.1,<7.0)", "flake8-pyi (>=24.1.0,<24.2.0)", "gssapi", "k5test", "mypy (>=1.8.0,<1.9.0)", "sspilib", "uvloop (>=0.15.3)"]
 
 [[package]]
+name = "asyncpg-stubs"
+version = "0.30.0"
+description = "asyncpg stubs"
+optional = false
+python-versions = "<4.0,>=3.8"
+files = [
+    {file = "asyncpg_stubs-0.30.0-py3-none-any.whl", hash = "sha256:1eac258c10fc45a781729913a2fcfba775888bed160ae47f55fe0964d639e9cd"},
+    {file = "asyncpg_stubs-0.30.0.tar.gz", hash = "sha256:8bfe20f1b1e24a19674152ec9abbcc2df72c01e78af696f44fc275d56fe335ba"},
+]
+
+[package.dependencies]
+asyncpg = ">=0.30,<0.31"
+typing-extensions = ">=4.7.0,<5.0.0"
+
+[[package]]
 name = "babel"
 version = "2.16.0"
 description = "Internationalization utilities"
@@ -1675,4 +1690,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "9836a35190033b73e9f7565a40e45a971fcd4b59ef6a90b47dfece3a72a85057"
+content-hash = "8576f4a19b742a3b99844da7207a9e6933b771e98f8c89f9441c0686eddfe381"

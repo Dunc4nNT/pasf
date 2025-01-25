@@ -4,7 +4,10 @@ from pydantic import BaseModel
 
 from app import __version__
 
-__all__ = ("SystemHealth",)
+__all__ = (
+    "HealthStatus",
+    "SystemHealth",
+)
 
 type HealthStatus = Literal["online", "offline"]
 
